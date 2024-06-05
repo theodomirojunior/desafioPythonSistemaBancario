@@ -17,7 +17,7 @@ while True:
 
     opcao = input(menu)
 
-    if opcao == "D" or opcao == "d":
+    if opcao in [ "D", "d"]:
         valor = float(input("Informe o valor do depósito: "))
 
         if valor > 0:
@@ -27,7 +27,7 @@ while True:
         else:
             print("Operação falhou! O valor informado é inválido.")
 
-    elif opcao == "S" or opcao == "s":
+    elif opcao in ["S", "s"]:
         valor = float(input("Informe o valor do saque: "))
 
         excedeu_saldo = valor > saldo
@@ -53,13 +53,13 @@ while True:
         else:
             print("Operação falhou! O valor informado é inválido.")
 
-    elif opcao == "E" or opcao == "e":
+    elif opcao in ["E", "e"]:
         print("\n================ EXTRATO ================")
         print("Não foram realizadas movimentações." if not extrato else extrato)
         print(f"\nSaldo: R$ {saldo:.2f}")
         print("==========================================")
 
-    elif opcao == "q" or opcao == "Q":
+    elif opcao in ["q", "Q"]:
         break
 
     else:
